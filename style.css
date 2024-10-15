@@ -92,7 +92,7 @@ body {
     gap: 50px; /*ruimte tussen de kolommen, andere soort padding*/
 }
 
-/* flex ordent kolommen */
+
 .controlButtons{
     display: flex;   /*flex centreert het*/
     flex-direction: column; /*zet de knoppen onderelkaar*/

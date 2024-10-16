@@ -1,18 +1,17 @@
-const lifeScreen = document.querySelector(".livesText");
-const coinScreen = document.querySelector(".coinsText");
-const scoreScreen = document.querySelector("#scoreScreen");
+const lifeScreen = document.querySelector(".livesText"); //het leven dat je op het scherm ziet
+const coinScreen = document.querySelector(".coinsText"); //coins dat je op scherm ziet
+const scoreScreen = document.querySelector("#scoreScreen"); //score die je ziet(neppe dobbelsteen)
 
-const btnThrow = document.querySelector('.controlButtons button:nth-child(1)');
-const btnHigher = document.querySelector('.controlButtons button:nth-child(2)');
-const btnLower = document.querySelector('.controlButtons button:nth-child(3)');
+const btnThrow = document.querySelector('.controlButtons button:nth-child(1)'); //gooi button
+const btnHigher = document.querySelector('.controlButtons button:nth-child(2)'); //higher button
+const btnLower = document.querySelector('.controlButtons button:nth-child(3)'); //lower button
 
-const feedbackText = document.querySelector(".feedbackTekst");
+const feedbackText = document.querySelector(".feedbackTekst"); //feedback, witte tekst beneden
 
-let lives, coins;
+let lives, coins; //vanzelf sprekend
 let gameStarted;    //om te kijken of het de eerste ronde is
-let previousDiceRoll, currentDiceRoll;
+let previousDiceRoll, currentDiceRoll; //vanzelf sprekend
 let playerBet;              //checkt of de speler hoger of lager kiest  
-
 
 function updateScreens(){   //Dit update lives en coins
     lifeScreen.textContent = "Lives: " + lives;
@@ -46,7 +45,7 @@ function updateScore(){ //vergelijken of de dicerolls hetzelfde zijn en coins ge
         Feedback("You rolled the same number ( º﹃º ) roll again!");
     }
     else if((currentDiceRoll > previousDiceRoll) && (playerBet == "higher")){
-        Feedback("You won a coin! (◞థ౪థ)ᴖ roll again!");
+        Feedback("You won a coin! ~\(≧▽≦)/~ roll again!");
         coins++;
     }
     else if((currentDiceRoll < previousDiceRoll) && (playerBet == "lower")){

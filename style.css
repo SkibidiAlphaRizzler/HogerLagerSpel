@@ -145,27 +145,27 @@ body {
 }
 
 .audio::-webkit-media-controls-panel {
-    background-color: rgb(138, 0, 0); /* Achtergrondkleur van de controls */
-    color: rgb(194, 0, 0); /* Tekstkleur van de controls */
+    background-color: rgb(138, 0, 0); /* Achtergrondkleur*/
+    color: rgb(194, 0, 0); /* Tekstkleur */
 }
 
 .audio-control {
-    position: absolute; /* Verander naar absolute positionering */
+    position: absolute; /* absolute positionering */
     left: 20px; /* Afstand vanaf de linkerkant */
-    bottom: 35px; /* Afstand vanaf de onderkant (verhoogd) */
+    bottom: 20px; /* Afstand vanaf de onderkant */
 }
 
 .audioTekst {
     visibility: hidden;
-    width: 200px; /* Pas de breedte aan indien nodig */
-    background-color: black; /* Achtergrondkleur van de tooltip */
-    color: #fff; /* Tekstkleur van de tooltip */
+    width: 200px; /* breedte */
+    background-color: black; /* tekst kleur */
+    color: #fff; /* Tekstkleur */
     text-align: center;
     border-radius: 6px;
     padding: 5px;
     position: absolute;
     z-index: 1;
-    top: 100%; /* Plaatst de audiotkest onder het element */
+    top: 100%; /* zet het tekst onder de geluid dinges */
     left: 50%;
     transform: translateX(-50%);
 }

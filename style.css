@@ -152,7 +152,7 @@ body {
 .audio-control {
     position: absolute; /* absolute positionering */
     left: 20px; /* Afstand vanaf de linkerkant */
-    bottom: 20px; /* Afstand vanaf de onderkant */
+    bottom: 30px; /* Afstand vanaf de onderkant */
 }
 
 .audioTekst {

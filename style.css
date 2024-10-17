@@ -114,6 +114,7 @@ body {
     cursor: pointer;    /*cursor vorm ding, komt alleen als hij is enabled*/
     color: rgb(226, 213, 212);          /*tekstkleur*/
     background-color: hwb(3 38% 7%);    /*achtergrond kleur*/
+    box-shadow: 0 0 50px red /* dit is een glow */
 }.controlButtons button:not(:disabled):active{  /*als de button NIET disabled is en je klikt erop*/
     color: rgb(255, 255, 255);
     background-color: rgb(228, 11, 0);
@@ -135,5 +136,42 @@ body {
     color: #c50707;
 }
  */
+
+ .audio {
+    width: 300px; /* Breder maken zodat het beter zichtbaar is */
+    background-color: #ff0000; /* kleur */
+    border: 2px solid #ff0000; /* Kleur van de rand */
+    border-radius: 50px; /* Hoekjes vorm, ik heb het rond gemaakt */  
+}
+
+.audio::-webkit-media-controls-panel {
+    background-color: rgb(138, 0, 0); /* Achtergrondkleur van de controls */
+    color: rgb(194, 0, 0); /* Tekstkleur van de controls */
+}
+
+.audio-control {
+    position: absolute; /* Verander naar absolute positionering */
+    left: 20px; /* Afstand vanaf de linkerkant */
+    bottom: 35px; /* Afstand vanaf de onderkant (verhoogd) */
+}
+
+.audioTekst {
+    visibility: hidden;
+    width: 200px; /* Pas de breedte aan indien nodig */
+    background-color: black; /* Achtergrondkleur van de tooltip */
+    color: #fff; /* Tekstkleur van de tooltip */
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    top: 100%; /* Plaatst de audiotkest onder het element */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.audio-control:hover .audioTekst {
+    visibility: visible;
+}
 
 

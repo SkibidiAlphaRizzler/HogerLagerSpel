@@ -45,14 +45,20 @@ function updateScore(){ //vergelijken of de dicerolls hetzelfde zijn en coins ge
         Feedback("You rolled the same number ( º﹃º ) roll again!");
     }
     else if((currentDiceRoll > previousDiceRoll) && (playerBet == "higher")){
+        let soundvar = new Audio('SoundEffects/coin-recieved-230517.mp3');
+        soundvar.play();
         Feedback("You won a coin! ~\(≧▽≦)/~ roll again!");
         coins++;
     }
     else if((currentDiceRoll < previousDiceRoll) && (playerBet == "lower")){
+        let soundvar = new Audio('SoundEffects/coin-recieved-230517.mp3');
+        soundvar.play();
         Feedback("You won a coin! ✌(-‿-)✌ roll again!");
         coins++;
     }
     else{
+        let soundvar = new Audio('SoundEffects/Minecraft Steve OOF Sound Effect [ ezmp3.cc ].mp3');
+        soundvar.play();
         console.log(previousDiceRoll + " -> " + currentDiceRoll);
         Feedback("You lost a life ୧༼ಠ益ಠ╭∩╮༽ roll again!");
         lives--;
@@ -60,12 +66,16 @@ function updateScore(){ //vergelijken of de dicerolls hetzelfde zijn en coins ge
     updateScreens();
 
     if(lives <= 0){ //het kijkt of leven niet 0 is zodat je ziet of je hebt verloren of niet
+        let soundvar = new Audio('SoundEffects/failure-drum-sound-effect-2-7184(1).mp3');
+        soundvar.play();
         alert("It's Over ༼ ༎ຶ ෴ ༎ຶ༽ your score was " + coins);
         Setup();
     }
 }
 
 btnThrow.addEventListener('click', function() { //random getal maken en de screens updaten qua lives en score
+    let soundvar = new Audio('SoundEffects/dice-142528.mp3');
+    soundvar.play();
     currentDiceRoll = diceRandom(1,6);
     scoreScreen.textContent = currentDiceRoll;
     btnThrow.disabled = true;   //je kan de knoppen niet klikken

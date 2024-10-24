@@ -170,7 +170,7 @@ body {
     transform: translateX(-50%);
 }
 
-.audio-control:hover .audioTekst {
+.audio-control:hover .audioTekst { /*ik weet niet meer wat het is its over*/
     visibility: visible;
 }
 

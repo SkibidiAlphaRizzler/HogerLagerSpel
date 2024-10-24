@@ -41,23 +41,23 @@ function diceRandom(min, max) { //dice random getal geven
 }
 
 function updateScore(){ //vergelijken of de dicerolls hetzelfde zijn en coins geven/levens eraf halen/game over
-    if(previousDiceRoll == currentDiceRoll){
+    if(previousDiceRoll == currentDiceRoll){ //dit is vanzelf sprekend maar voor de zekerheid, als de vorige diceroll en die van nu hetzelfde zijn dan krijg je deze teksts
         Feedback("You rolled the same number ( º﹃º ) roll again!");
     }
-    else if((currentDiceRoll > previousDiceRoll) && (playerBet == "higher")){
+    else if((currentDiceRoll > previousDiceRoll) && (playerBet == "higher")){  //als nieuwe diceroll hoger is dan de vorige dan is playerbet higher dus krijg je een coin plus sound fx
         let soundfx = new Audio('SoundEffects/coin-recieved-230517.mp3');
         soundfx.play();
-        Feedback("You won a coin! ~\(≧▽≦)/~ roll again!");
-        coins++;
+        Feedback("You won a coin! ~\(≧▽≦)/~ roll again!"); //ook nog tekst natuurlijk
+        coins++; //je krijgt een coin
     }
-    else if((currentDiceRoll < previousDiceRoll) && (playerBet == "lower")){
+    else if((currentDiceRoll < previousDiceRoll) && (playerBet == "lower")){ //als je roll lager is dan de vorige en je lager had gekozen dan krijg je een coin en komt een sound fx
         let soundfx = new Audio('SoundEffects/coin-recieved-230517.mp3');
         soundfx.play();
         Feedback("You won a coin! ✌(-‿-)✌ roll again!");
         coins++;
     }
     else{
-        let soundfx = new Audio('SoundEffects/Minecraft Steve OOF Sound Effect [ ezmp3.cc ].mp3');
+        let soundfx = new Audio('SoundEffects/Minecraft Steve OOF Sound Effect [ ezmp3.cc ].mp3'); //als het fout is krijg je een leven eraf
         soundfx.play();
         console.log(previousDiceRoll + " -> " + currentDiceRoll);
         Feedback("You lost a life ୧༼ಠ益ಠ╭∩╮༽ roll again!");
@@ -75,8 +75,8 @@ function updateScore(){ //vergelijken of de dicerolls hetzelfde zijn en coins ge
 
 btnThrow.addEventListener('click', function() { //random getal maken en de screens updaten qua lives en score
     let soundfx = new Audio('SoundEffects/dice-142528.mp3');
-    soundfx.play();
-    currentDiceRoll = diceRandom(1,6);
+    soundfx.play(); 
+    currentDiceRoll = diceRandom(1,6); 
     scoreScreen.textContent = currentDiceRoll;
     btnThrow.disabled = true;   //je kan de knoppen niet klikken
     
